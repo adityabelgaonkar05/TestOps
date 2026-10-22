@@ -11,6 +11,10 @@ npm start
 
 The server listens on `0.0.0.0` at port `3000` by default. Set `PORT` to use another port. Run automated tests with `npm test`.
 
+## Frontend
+
+Open `http://localhost:3000/` to use the built-in frontend. It lets you submit text to `/api/analyze`, view key metrics, and inspect top word frequencies.
+
 ## Endpoints
 
 Analyze text:

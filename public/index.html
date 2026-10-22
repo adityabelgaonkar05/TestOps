@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TextOps</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>TextOps</h1>
+    <p class="subtitle">Analyze text instantly with word, sentence, and reading-time metrics.</p>
+
+    <form id="analyze-form">
+      <label for="text-input">Text</label>
+      <textarea id="text-input" name="text" rows="10" maxlength="50000" required placeholder="Paste or type text here..."></textarea>
+
+      <div class="controls">
+        <button type="submit" id="analyze-button">Analyze</button>
+        <button type="button" id="clear-button">Clear</button>
+      </div>
+    </form>
+
+    <section id="error" class="panel error hidden" aria-live="polite"></section>
+
+    <section id="results" class="panel hidden" aria-live="polite">
+      <h2>Results</h2>
+      <dl>
+        <div><dt>Characters</dt><dd id="character-count">0</dd></div>
+        <div><dt>Words</dt><dd id="word-count">0</dd></div>
+        <div><dt>Sentences</dt><dd id="sentence-count">0</dd></div>
+        <div><dt>Estimated reading time</dt><dd id="reading-time">0 min</dd></div>
+      </dl>
+      <h3>Top words</h3>
+      <ol id="top-words"></ol>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

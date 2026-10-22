@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #f4f6fb;
+  color: #1a1f36;
+}
+
+.container {
+  width: min(800px, 92vw);
+  margin: 2rem auto;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.subtitle {
+  margin: 0.5rem 0 1rem;
+  color: #4b556a;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #c8d0e0;
+  border-radius: 8px;
+  resize: vertical;
+  font: inherit;
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+#analyze-button {
+  background: #2563eb;
+  color: #fff;
+}
+
+#clear-button {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.panel {
+  margin-top: 1rem;
+  border: 1px solid #dde3f0;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.error {
+  border-color: #ef4444;
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+dl {
+  margin: 0;
+}
+
+dl > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+}
+
+ol {
+  margin: 0.5rem 0 0 1.2rem;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}

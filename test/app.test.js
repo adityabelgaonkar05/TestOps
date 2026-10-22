@@ -69,6 +69,15 @@ test('rejects missing, non-string, blank, and over-limit text with JSON errors',
 
 test('health, info, malformed JSON, and unknown routes return the documented shapes', async () => {
   await withServer(async (baseUrl) => {
+    const frontend = await fetch(`${baseUrl}/`);
+    assert.equal(frontend.status, 200);
+    assert.match(frontend.headers.get('content-type'), /text\/html/);
+    assert.match(await frontend.text(), /<title>TextOps<\/title>/);
+
+    const frontendScript = await fetch(`${baseUrl}/app.js`);
+    assert.equal(frontendScript.status, 200);
+    assert.match(frontendScript.headers.get('content-type'), /javascript/);
+
     const health = await fetch(`${baseUrl}/health`);
     assert.equal(health.status, 200);
     assert.deepEqual(await health.json(), { status: 'ok' });
